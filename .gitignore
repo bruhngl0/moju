@@ -3,4 +3,6 @@ node_modules/
 out/
 .DS_Store
 npm-debug.log*
-
+.env*
+!.env.example
+.local/

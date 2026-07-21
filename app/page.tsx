@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import TournamentHub from '@/components/TournamentHub'
 
 function MojuMark() {
   return <div className="mark" aria-label="moju logo"><span className="mark-eye eye-one" /><span className="mark-eye eye-two" /><span className="mark-mouth" /></div>
@@ -66,7 +67,7 @@ export default function Home() {
     <nav className="nav shell">
       <a href="#top" className="wordmark"><MojuMark /><span>moju<span className="dot">.</span></span></a>
       <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-        <a href="#work" onClick={() => setMenuOpen(false)}>our work</a><a href="#about" onClick={() => setMenuOpen(false)}>about us</a><a href="#contact" onClick={() => setMenuOpen(false)}>say hi</a>
+        <a href="/tournaments" onClick={() => setMenuOpen(false)}>all tournaments</a><a href="/sandbox" onClick={() => setMenuOpen(false)}>live sandbox</a><a href="#tournaments" onClick={() => setMenuOpen(false)}>meme wars</a><a href="#work" onClick={() => setMenuOpen(false)}>our work</a><a href="#about" onClick={() => setMenuOpen(false)}>about us</a><a href="#contact" onClick={() => setMenuOpen(false)}>say hi</a>
       </div>
       <button className="menu-btn" onClick={() => setMenuOpen(!isMenuOpen)} aria-label="Toggle menu">{isMenuOpen ? '×' : '☰'}</button>
     </nav>
@@ -89,6 +90,8 @@ export default function Home() {
     </section>
 
     <div className="ticker"><div className="ticker-track"><span>NO RUSH</span><b>✳</b><span>GOOD VIBES ONLY</span><b>✳</b><span>NO RUSH</span><b>✳</b><span>GOOD VIBES ONLY</span><b>✳</b><span>NO RUSH</span><b>✳</b><span>GOOD VIBES ONLY</span><b>✳</b></div></div>
+
+    <TournamentHub />
 
     <section className="work shell" id="work">
       <div className="section-heading"><p className="eyebrow">Selected non-achievements</p><h2>Stuff we <span>never ship</span><span className="hero-dot">!</span></h2><div className="tiny-arrow">↘</div></div>
